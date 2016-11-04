@@ -29,8 +29,15 @@
             android:name=".SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+
         <service
-            android:name=".PlayService" android:enabled="true"/>
+            android:name=".PlayService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".ThirdActivity"
+            android:label="@string/title_activity_third" >
+        </activity>
     </application>
 
 </manifest>

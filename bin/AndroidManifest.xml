@@ -29,8 +29,19 @@
             android:name=".SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
+
         <service
-            android:name=".PlayService" android:enabled="true"/>
+            android:name=".PlayService"
+            android:enabled="true" />
+
+        <activity
+            android:name=".ThirdActivity"
+            android:label="@string/title_activity_third" >
+            <intent-filter>
+                <action android:name="com.example.testcall.ACTION_START"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

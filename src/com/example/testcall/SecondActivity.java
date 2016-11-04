@@ -17,6 +17,7 @@ import android.widget.EditText;
 
 public class SecondActivity extends Activity {
 	EditText editText3;
+	Button btn,btn2;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -24,7 +25,7 @@ public class SecondActivity extends Activity {
 		this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_second);
 		editText3 = (EditText)findViewById(R.id.editText3);
-		Button btn = (Button)findViewById(R.id.btn1);
+		btn = (Button)findViewById(R.id.btn1);
 		btn.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -37,6 +38,19 @@ public class SecondActivity extends Activity {
 				setResult(2, intent);
 				//startActivity(intent);
 				finish();
+			}
+		});
+		
+		btn2 = (Button)findViewById(R.id.btn2);
+		btn2.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent("com.example.testcall.ACTION_START");
+				intent.addCategory("android.intent.category.DEFAULT");
+				startActivity(intent);
+				
 			}
 		});
 		
